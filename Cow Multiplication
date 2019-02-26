@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+	char a[10], b[10];
+	int val, val2, num=0, x, num2, y, suma=0;
+	scanf("%s", a);
+	scanf("%s", b);
+	val= strlen( a );
+	val2= strlen ( b );
+	x=0;
+	y=0;
+	for (x=0; x<val; x++)
+	{	
+		for(y=0; y<val2; y++) 
+		{
+			num = a[x]-'0';
+			num2 = b[y]-'0';
+			suma= suma +( num * num2);
+		}
+	}
+	printf("%d", suma);
+	printf("\n");	
+	return 0;
+}
