@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+	int x, index, suma=0, d;
+	scanf("%d", &x);
+	if (x==0)
+		printf("1\n");
+	else
+	{
+		suma=0;
+		if(x<0)
+		{
+			for(index=1;index>=x;index--) 
+				suma = suma +index;
+		}
+		else 
+		{
+			for(index=1;index<=x;index++) 
+				suma += index;
+		}
+	}	
+	printf("%d", suma);
+	return 0;
+	
+}
