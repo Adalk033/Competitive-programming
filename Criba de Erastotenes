@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+	int index, two, arr[300] = { 0 }, d;
+
+	for (index = 2; index < 300; index++)
+	{
+		if (arr[index] == 0)
+		{
+			for (two = 2 * index; two < 300; two += index)
+				arr[two] = 1;
+		}
+	}
+	for (index = 2; index < 300; index++)
+	{
+		if (arr[index] == 0)
+			printf("%d\n", index);
+	}
+	return 0;
+}
